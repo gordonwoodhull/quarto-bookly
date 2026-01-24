@@ -4,8 +4,12 @@
 // Apply bookly template
 // Note: title-page: none disables bookly's title page (Quarto handles its own)
 #show: bookly.with(
-  title: "Book Title",
-  author: "Author",
+$if(title)$
+  title: [$title$],
+$endif$
+$if(by-author)$
+  author: "$for(by-author)$$it.name.literal$$sep$, $endfor$",
+$endif$
   title-page: none,
 )
 
