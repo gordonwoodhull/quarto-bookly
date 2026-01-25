@@ -15,3 +15,7 @@ $endif$
 
 // Use main-matter for standard book content
 #show: main-matter
+
+// Apply chapter-based numbering to all figures
+// Bookly may not number Quarto's custom figure kinds (quarto-float-fig, etc.)
+#set figure(numbering: quarto-figure-numbering)
