@@ -1,0 +1,12 @@
+# typst-gather configuration
+# Run: quarto call typst-gather
+
+destination = "typst/packages"
+
+discover = ["numbering.typ", "typst-show.typ"]
+
+# Local packages (@local namespace) must be configured manually.
+# Found @local imports:
+#   @local/bookly:1.1.3 (in typst-show.typ)
+[local]
+bookly = "/Users/gordon/src/tb-work/templates/bookly"
