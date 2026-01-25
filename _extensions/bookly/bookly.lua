@@ -37,7 +37,7 @@ local header_filter = {
     if bookItemType == "appendix" then
       if file.bookItemNumber == 1 or file.bookItemNumber == nil then
         -- Update Quarto's appendix state for numbering
-        local stateUpdate = pandoc.RawBlock('typst', '#quarto-appendix-state.update(true)')
+        local stateUpdate = pandoc.RawBlock('typst', '#appendix-state.update(true)')
 
         -- Apply bookly's appendix environment
         local appendixStyle = pandoc.RawBlock('typst', '#show: appendix')
